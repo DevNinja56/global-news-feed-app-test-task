@@ -6,6 +6,7 @@ import { UserModule } from './modules/user/user.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { BookmarkModule } from './modules/bookmark/bookmark.module';
 import { NewsModule } from './modules/news/news.module';
+import { TranslationModule } from './modules/translation/translation.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { NewsModule } from './modules/news/news.module';
     AuthModule,
     BookmarkModule,
     NewsModule,
+    TranslationModule,
   ],
 })
 export class AppModule {}
