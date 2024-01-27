@@ -26,7 +26,7 @@ const SignIn = () => {
     handleSubmit: fromSubmit,
     formState: { errors },
     setError,
-  } = useForm<signInForm>({ resolver: signInFormSchema });
+  } = useForm({ resolver: signInFormSchema });
 
   const handleSubmit = (body: signInForm) => {
     setIsLoading(true);

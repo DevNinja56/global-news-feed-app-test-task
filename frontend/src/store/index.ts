@@ -3,7 +3,7 @@ import authUserInfo from '@/store/slices/auth.slice';
 import { stateQueryApi } from './slices/allRequests';
 import uiSlice from './slices/ui.slice';
 
-export const store = configureStore({
+export const store: any = configureStore({
   reducer: {
     [stateQueryApi.reducerPath]: stateQueryApi.reducer,
     auth: authUserInfo,
