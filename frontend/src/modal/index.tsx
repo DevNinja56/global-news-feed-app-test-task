@@ -3,7 +3,7 @@ import { modalType } from '@/store/slices/ui.slice';
 import ConfirmUserModal from './ConfirmUserModal';
 import { useUi } from '@/hooks/user-interface';
 import Modal from '@/components/Modal';
-import CountryAndLanguageModal from './heello';
+import CountryAndLanguageModal from './CountryAndLanguageModal';
 
 const ModalWraper = () => {
   const { modal } = useUi();
