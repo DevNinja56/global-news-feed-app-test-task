@@ -1,0 +1,36 @@
+version: '3'
+
+networks:
+  my_network:
+    external: true
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3001:3001'
+    depends_on:
+      - mongo
+    env_file:
+      - .env
+    networks:
+      - my_network
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    command: [--auth]
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./db:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    networks:
+      - my_network
+
+volumes:
+  db:
