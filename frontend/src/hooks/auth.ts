@@ -18,7 +18,7 @@ export const useUserAuth = () => {
   const dispatch = useAppDispatch();
   const { push } = useRouter();
   const updateUserDetails = (obj: userType) => dispatch(updateUser(obj));
-  const refetchUser = () => dispatch(verifyUser());
+  const refetchUser: any = () => dispatch(verifyUser());
 
   const logoutUser = () => {
     fetchRequest({ url: API_ENDPOINTS.AUTH.LOG_OUT }).then(() => {
